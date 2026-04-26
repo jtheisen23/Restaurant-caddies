@@ -763,8 +763,8 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
   border-color: rgba(184,117,58,0.3);
 }
 .team-avatar {
-  width: 84px;
-  height: 84px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--c-forest) 0%, var(--c-forest-2) 100%);
   color: #fff;
@@ -773,10 +773,26 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
   justify-content: center;
   font-family: var(--font-serif);
   font-weight: 600;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(11, 31, 23, 0.15);
+  flex-shrink: 0;
 }
-.team-avatar span {
-  font-size: 1.75rem;
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.team-avatar-fallback::before {
+  content: attr(data-initials);
+  font-size: 1.9rem;
   letter-spacing: 0.04em;
+  color: #fff;
+}
+.team-card {
+  grid-template-columns: 96px 1fr;
 }
 .team-body h3 {
   margin: 0 0 4px;
