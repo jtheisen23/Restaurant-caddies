@@ -23,20 +23,20 @@ python3 -m http.server 8080
 
 ## Sections
 
-1. Hero — value proposition + CTA + at-a-glance stats
-2. Trust strip — segments served
-3. Services — six core offerings (tech stack, loyalty, ordering, CDP/CRM, AI, procurement)
-4. Approach — four-step engagement model
-5. Franchise development — services + readiness assessment CTA
-6. Results — outcome stats + client quote
-7. About — company positioning and values
-8. Contact — form + email fallback
+1. Hero — "Strategy and execution. No mulligans." with at-a-glance stats
+2. Intro — golf-as-integrity values strip
+3. Services — MarTech (POS, Loyalty, Ordering, Mobile, CRM, CDP, 3rd-party, AI) and Operations & Franchise Development
+4. Approach — Start with the P&L → Choose partners → Negotiate → Implement
+5. Success — four real case studies (400-unit pizza $2.7M; 100-unit smoothie POS; 25-unit breakfast DoorDash; 50-unit casual ghost kitchens)
+6. Team — Jeremy Theisen and Kim DeCarolis, with bios and contacts
+7. About — golf-inspired positioning
+8. Contact — Chicago / Detroit phone numbers, both founder emails, Instagram, and a contact form
 
 ## Editing content
 
-Most copy lives directly in `index.html`. The result stats, service bullets, and quote are placeholders that should be reviewed and replaced with specific, attributed examples before launch.
+All copy lives directly in `index.html`. The contact form currently uses `mailto:` as a fallback (sending to both Jeremy@ and Kim@). Wire it to a real form handler (Jetpack Forms, Formspree, Netlify Forms, HubSpot, etc.) before going live.
 
-The contact form currently uses `mailto:` as a fallback. Wire it to a real form handler (Formspree, Netlify Forms, HubSpot, etc.) before going live.
+Founder photos use initial-style avatars for now; swap them for real headshots when ready (drop image files into the project and replace the `.team-avatar` block in `index.html`).
 
 ## Brand notes
 
