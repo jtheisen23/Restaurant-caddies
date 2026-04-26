@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Restaurant Caddies — Chicago and Detroit offices. Book a complimentary strategy session." />
+  <meta name="theme-color" content="#0b1f17" />
+  <title>Contact — Restaurant Caddies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Restaurant Caddies home">
+        <svg class="brand-mark" width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="20" cy="14" r="2.2" fill="currentColor"/>
+          <path d="M20 16.5 L20 30" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M14 30 L26 30" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Restaurant <span class="brand-accent">Caddies</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="success.html">Success</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book a strategy session</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="success.html">Success</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Book a strategy session</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section section-cta">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow eyebrow-light">Get in touch</p>
+          <h1>Book a complimentary strategy session.</h1>
+          <p>Tell us a bit about your brand and what's on your mind. We'll be in touch within one business day.</p>
+          <ul class="cta-contact">
+            <li>
+              <span class="cta-contact-label">Chicago Office</span>
+              <a href="tel:+16308852997">(630) 885-2997</a>
+            </li>
+            <li>
+              <span class="cta-contact-label">Detroit Office</span>
+              <a href="tel:+15864058255">(586) 405-8255</a>
+            </li>
+            <li>
+              <span class="cta-contact-label">Email</span>
+              <a href="mailto:Jeremy@restaurantcaddies.com">Jeremy@restaurantcaddies.com</a>
+              &nbsp;·&nbsp;
+              <a href="mailto:Kim@restaurantcaddies.com">Kim@restaurantcaddies.com</a>
+            </li>
+            <li>
+              <span class="cta-contact-label">Instagram</span>
+              <a href="https://www.instagram.com/restaurantcaddies/" target="_blank" rel="noopener">@restaurantcaddies</a>
+            </li>
+          </ul>
+        </div>
+        <!--
+          The contact form is wired to Web3Forms. To activate it:
+          1. Go to https://web3forms.com and create a free access key (just enter the email
+             you want submissions delivered to).
+          2. Replace REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY below with that key.
+          Until you do, submissions will fail with an error message.
+        -->
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-web3forms novalidate>
+          <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="New strategy session inquiry — restaurantcaddies.com" />
+          <input type="hidden" name="from_name" value="Restaurant Caddies Website" />
+          <input type="hidden" name="redirect" value="false" />
+          <input type="checkbox" name="botcheck" class="hidden-honeypot" tabindex="-1" autocomplete="off" />
+
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Company</span>
+              <input type="text" name="company" autocomplete="organization" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label>
+              <span>Phone (optional)</span>
+              <input type="tel" name="phone" autocomplete="tel" />
+            </label>
+          </div>
+          <label>
+            <span>What can we help with?</span>
+            <select name="topic">
+              <option>Technology stack evaluation</option>
+              <option>Loyalty / CRM / CDP</option>
+              <option>Online &amp; third-party ordering</option>
+              <option>AI strategy</option>
+              <option>Procurement &amp; contract negotiation</option>
+              <option>Franchise development</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>
+            <span>A bit about your brand</span>
+            <textarea name="message" rows="4" placeholder="Concept, units, growth stage, and what's on your mind…"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html" class="brand">
+          <svg class="brand-mark" width="30" height="30" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="20" cy="14" r="2.2" fill="currentColor"/>
+            <path d="M20 16.5 L20 30" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M14 30 L26 30" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">Restaurant <span class="brand-accent">Caddies</span></span>
+        </a>
+        <p class="footer-tag">Strategy and execution. No mulligans.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h5>Site</h5>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="success.html">Success</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h5>Locations</h5>
+        <ul>
+          <li>Chicago — <a href="tel:+16308852997">(630) 885-2997</a></li>
+          <li>Detroit — <a href="tel:+15864058255">(586) 405-8255</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul class="contact-list">
+          <li><a href="mailto:Jeremy@restaurantcaddies.com">Jeremy@restaurantcaddies.com</a></li>
+          <li><a href="mailto:Kim@restaurantcaddies.com">Kim@restaurantcaddies.com</a></li>
+          <li><a href="https://www.instagram.com/restaurantcaddies/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Restaurant Caddies. All rights reserved.</p>
+      <p class="muted">Independent advisory. No vendor commissions, ever.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
