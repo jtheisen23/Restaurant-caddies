@@ -181,12 +181,13 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
   .brand-logo { height: 52px; }
 }
 
-/* Footer-specific size variant — slightly smaller than the header */
+/* Footer-specific size variant — large brand presence in the footer */
 .brand-logo--footer {
-  height: 72px;
+  height: 288px;
+  max-width: 100%;
 }
 @media (max-width: 720px) {
-  .brand-logo--footer { height: 60px; }
+  .brand-logo--footer { height: 240px; }
 }
 
 /* Footer/dark contexts: invert to white-on-dark and use screen blend so the
@@ -619,10 +620,23 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
 }
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 36px;
   padding-bottom: 36px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+/* Brand block spans the full width as the footer's hero element */
+.footer-inner > :first-child {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 36px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-inner > :first-child .brand {
+  justify-content: center;
 }
 .site-footer .brand { color: #fff; }
 .site-footer .brand-mark { color: var(--c-accent); }
