@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="g" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#1a3a2c"/>
+      <stop offset="60%" stop-color="#0b1f17"/>
+      <stop offset="100%" stop-color="#06140e"/>
+    </radialGradient>
+    <radialGradient id="copper" cx="80%" cy="15%" r="35%">
+      <stop offset="0%" stop-color="#b8753a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#b8753a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#copper)"/>
+
+  <!-- subtle border -->
+  <rect x="32" y="32" width="1136" height="566" fill="none" stroke="#b8753a" stroke-width="1" opacity="0.25"/>
+
+  <!-- brand mark -->
+  <g transform="translate(80, 80)">
+    <circle cx="40" cy="40" r="40" fill="none" stroke="#b8753a" stroke-width="1.6" opacity="0.6"/>
+    <circle cx="40" cy="28" r="4.5" fill="#b8753a"/>
+    <path d="M40 32 L40 60" stroke="#b8753a" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M28 60 L52 60" stroke="#b8753a" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="100" y="50" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" fill="#faf7f2" letter-spacing="0.02em">RESTAURANT CADDIES</text>
+  </g>
+
+  <!-- main tagline -->
+  <text x="80" y="340" font-family="Fraunces, Georgia, serif" font-size="92" font-weight="600" fill="#faf7f2" letter-spacing="-0.02em">Strategy and execution.</text>
+  <text x="80" y="430" font-family="Fraunces, Georgia, serif" font-size="92" font-weight="600" fill="#b8753a" font-style="italic" letter-spacing="-0.02em">No mulligans.</text>
+
+  <!-- supporting line -->
+  <text x="80" y="510" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#c8c2b3" letter-spacing="0.005em">Independent advisory for restaurant brands —</text>
+  <text x="80" y="544" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#c8c2b3" letter-spacing="0.005em">technology, operations, and franchise development.</text>
+
+  <!-- bottom accent line -->
+  <rect x="80" y="582" width="48" height="3" fill="#b8753a"/>
+</svg>

@@ -19,7 +19,11 @@ Plain static site — no build step required.
 
 - `styles.css` — design system, layout, responsive rules
 - `script.js` — header scroll state, mobile nav, active-link highlight, scroll reveal, async form submit
-- `assets/` — drop in `jeremy.jpg` and `kim.jpg` for headshots (the team avatars gracefully fall back to initials if either is missing)
+- `assets/favicon.svg` — site icon (vector, used as `<link rel="icon">`)
+- `assets/og.svg` — social preview image (1200×630, used as `og:image` and `twitter:image`)
+- `assets/jeremy.jpg` and `assets/kim.jpg` — founder headshots (drop in to replace the initials fallback)
+- `sitemap.xml` and `robots.txt` — for search engine indexing
+- JSON-LD `ProfessionalService` schema is inlined in `index.html` for rich Google results
 
 ## Local preview
 
@@ -40,6 +44,21 @@ The form on `contact.html` is wired to [Web3Forms](https://web3forms.com) — a 
 That's it. Submissions arrive in your inbox. The form has a hidden honeypot for bot protection and shows inline success/error messages without leaving the page.
 
 If you'd rather use a different handler (Formspree, Netlify Forms, HubSpot, Jetpack), the form fields and styles will work as-is — just change the `action` and update `script.js`.
+
+## Notes on the OG image
+
+`assets/og.svg` is a 1200×630 SVG used as the social-preview image. SVG works fine in many crawlers (LinkedIn, Slack, Discord render it), but a few platforms (older Facebook scrapers, some Twitter clients) prefer raster.
+
+If you want maximum compatibility, convert it to PNG:
+
+```bash
+# with rsvg-convert
+rsvg-convert -w 1200 -h 630 assets/og.svg -o assets/og.png
+
+# or with ImageMagick / Inkscape / any online SVG-to-PNG tool
+```
+
+Then update the `og:image` and `twitter:image` URLs in each HTML `<head>` to `og.png`.
 
 ## Brand notes
 

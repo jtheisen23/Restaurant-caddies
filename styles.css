@@ -51,12 +51,15 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-serif);
   color: var(--c-ink);
   margin: 0 0 .5em;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  line-height: 1.12;
+  letter-spacing: -0.018em;
   font-weight: 600;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
+  font-variation-settings: "opsz" 36, "SOFT" 50;
+  text-wrap: balance;
 }
-h1 { font-size: clamp(2.4rem, 5.2vw, 4rem); }
-h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
+h1 { font-size: clamp(2.4rem, 5.2vw, 4rem); font-variation-settings: "opsz" 144, "SOFT" 30; letter-spacing: -0.028em; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-variation-settings: "opsz" 96, "SOFT" 40; }
 h3 { font-size: 1.25rem; }
 h4 { font-size: 1.05rem; }
 p  { margin: 0 0 1em; color: var(--c-ink-soft); }
@@ -108,12 +111,13 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
 .btn-primary {
   background: var(--c-accent);
   color: #fff;
-  box-shadow: 0 8px 18px rgba(184, 117, 58, 0.28);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05), 0 6px 14px rgba(184, 117, 58, 0.22);
 }
 .btn-primary:hover {
   background: var(--c-accent-deep);
   color: #fff;
   transform: translateY(-1px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05), 0 10px 20px rgba(184, 117, 58, 0.28);
 }
 
 .btn-secondary {
@@ -1017,6 +1021,123 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
 }
 .form-status.is-success { color: #9bd9a8; }
 .form-status.is-error { color: #ffb4a8; }
+
+/* =========================================================
+   Credibility strip
+   ========================================================= */
+.credibility {
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+  padding: 32px 0;
+}
+.credibility-label {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: .78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  font-weight: 500;
+}
+.credibility-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px 36px;
+}
+.credibility-row li {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  color: var(--c-ink);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  font-variation-settings: "opsz" 60, "SOFT" 50;
+  position: relative;
+  opacity: 0.8;
+  transition: opacity .25s ease;
+}
+.credibility-row li:hover { opacity: 1; }
+.credibility-row li:not(:last-child)::after {
+  content: "·";
+  position: absolute;
+  right: -22px;
+  top: 0;
+  color: var(--c-accent);
+  opacity: 0.6;
+}
+
+@media (max-width: 720px) {
+  .credibility-row { gap: 10px 24px; }
+  .credibility-row li:not(:last-child)::after { right: -16px; }
+}
+
+/* =========================================================
+   Editorial moment (large pull-quote)
+   ========================================================= */
+.editorial {
+  background: var(--c-forest);
+  color: #ece6d8;
+  padding: clamp(80px, 12vw, 140px) 0;
+  position: relative;
+  overflow: hidden;
+}
+.editorial::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(184,117,58,0.20), transparent 45%),
+    radial-gradient(circle at 8% 80%, rgba(184,117,58,0.08), transparent 40%);
+  pointer-events: none;
+}
+.editorial > .container { position: relative; z-index: 1; max-width: 1080px; }
+.editorial-eyebrow {
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #d9b791;
+  margin: 0 0 28px;
+}
+.editorial-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5.6vw, 4.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 36px;
+  max-width: 22ch;
+  font-variation-settings: "opsz" 144, "SOFT" 25;
+  text-wrap: balance;
+}
+.editorial-quote em {
+  font-style: italic;
+  color: var(--c-accent);
+  font-weight: 500;
+}
+.editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #d9b791;
+  font-weight: 600;
+  font-size: .98rem;
+  letter-spacing: 0.005em;
+  border-bottom: 1px solid rgba(217,183,145,0.35);
+  padding-bottom: 4px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.editorial-link:hover {
+  color: #fff;
+  border-color: #fff;
+}
 
 /* =========================================================
    Active nav state
