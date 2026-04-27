@@ -181,6 +181,42 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
   .brand-logo { height: 52px; }
 }
 
+/* Stacked-brand layout: in the header, show only the bag icon (cropped from
+   the top of the logo JPG) with "Restaurant Caddies" wordmark below. */
+.site-header .brand,
+.brand-stacked {
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.brand-icon-wrap {
+  display: block;
+  width: 110px;
+  height: 74px;       /* visible portion = the bag icon only */
+  overflow: hidden;
+  line-height: 0;
+  flex-shrink: 0;
+}
+.brand-icon-wrap .brand-logo--icon {
+  display: block;
+  height: auto;
+  width: 110px;       /* renders ~116px tall (logo aspect 1:1.053);
+                         bottom ~36% containing wordmark + tagline is clipped */
+  margin: 0;
+  mix-blend-mode: multiply;
+}
+.site-header .brand-name {
+  font-size: 1.05rem;
+  letter-spacing: 0.005em;
+  line-height: 1;
+}
+
+@media (max-width: 720px) {
+  .brand-icon-wrap { width: 90px; height: 60px; }
+  .brand-icon-wrap .brand-logo--icon { width: 90px; }
+  .site-header .brand-name { font-size: 0.95rem; }
+}
+
 /* Footer-specific size variant — large brand presence in the footer */
 .brand-logo--footer {
   height: 288px;
