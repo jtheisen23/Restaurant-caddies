@@ -63,12 +63,68 @@
   </header>
 
   <main id="main">
+    <!-- SCHEDULE -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Get in touch</p>
+        <h1>Book a complimentary strategy session.</h1>
+        <p class="page-lede">
+          The first conversation is on us. Pick a time directly, or send us a message and we'll be in touch
+          within one business day.
+        </p>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- CALENDLY PLACEHOLDER -->
+    <section class="section schedule-section">
+      <div class="container schedule-grid">
+        <div class="schedule-card">
+          <p class="service-eyebrow">Schedule directly</p>
+          <h2>Pick a time on our calendar.</h2>
+          <p>30-minute discovery call with one of the founders. No pitch — we just want to understand what you're trying to grow.</p>
+          <!--
+            To wire up scheduling:
+            1. Create a Calendly (or SavvyCal / Cal.com) event
+            2. Replace the href below with your scheduling URL, e.g.:
+               https://calendly.com/restaurantcaddies/strategy-session
+            3. (Optional) To embed inline instead of opening in a new tab, drop the
+               Calendly inline embed snippet into this card and remove the button.
+          -->
+          <a href="https://calendly.com/" target="_blank" rel="noopener" class="btn btn-primary">Pick a time →</a>
+          <p class="schedule-note">Or, prefer phone? <a href="tel:+16308852997">Chicago (630) 885-2997</a> · <a href="tel:+15864058255">Detroit (586) 405-8255</a></p>
+        </div>
+
+        <aside class="schedule-side">
+          <h3>Direct contact</h3>
+          <ul class="schedule-contact">
+            <li>
+              <span class="schedule-contact-label">Jeremy Theisen</span>
+              <a href="mailto:Jeremy@restaurantcaddies.com">Jeremy@restaurantcaddies.com</a>
+            </li>
+            <li>
+              <span class="schedule-contact-label">Kim DeCarolis</span>
+              <a href="mailto:Kim@restaurantcaddies.com">Kim@restaurantcaddies.com</a>
+            </li>
+            <li>
+              <span class="schedule-contact-label">Instagram</span>
+              <a href="https://www.instagram.com/restaurantcaddies/" target="_blank" rel="noopener">@restaurantcaddies</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
     <section class="section section-cta">
       <div class="container cta-inner">
         <div>
-          <p class="eyebrow eyebrow-light">Get in touch</p>
-          <h1>Book a complimentary strategy session.</h1>
-          <p>Tell us a bit about your brand and what's on your mind. We'll be in touch within one business day.</p>
+          <p class="eyebrow eyebrow-light">Or send a message</p>
+          <h2>Tell us a bit about your brand.</h2>
+          <p>
+            Whether you're refining your stack, evaluating a new partner, or thinking about
+            franchising — share what's on your mind and we'll come prepared.
+          </p>
           <ul class="cta-contact">
             <li>
               <span class="cta-contact-label">Chicago Office</span>
@@ -77,16 +133,6 @@
             <li>
               <span class="cta-contact-label">Detroit Office</span>
               <a href="tel:+15864058255">(586) 405-8255</a>
-            </li>
-            <li>
-              <span class="cta-contact-label">Email</span>
-              <a href="mailto:Jeremy@restaurantcaddies.com">Jeremy@restaurantcaddies.com</a>
-              &nbsp;·&nbsp;
-              <a href="mailto:Kim@restaurantcaddies.com">Kim@restaurantcaddies.com</a>
-            </li>
-            <li>
-              <span class="cta-contact-label">Instagram</span>
-              <a href="https://www.instagram.com/restaurantcaddies/" target="_blank" rel="noopener">@restaurantcaddies</a>
             </li>
           </ul>
         </div>
@@ -143,6 +189,91 @@
           <button type="submit" class="btn btn-primary btn-block">Send message</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-muted">
+      <div class="container faq-wrap">
+        <header class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions before we start.</h2>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How do you charge?</summary>
+            <div class="faq-answer">
+              <p>
+                Most engagements are scoped as a fixed-fee project (technology evaluation, FDD authoring,
+                franchise GTM build) or a monthly retainer for ongoing advisory. Large procurement
+                negotiations are sometimes structured against the savings we deliver. We discuss this
+                openly on the first call.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How long is a typical engagement?</summary>
+            <div class="faq-answer">
+              <p>
+                It depends on scope. A technology stack evaluation typically runs 6–12 weeks. A franchise
+                go-to-market build runs 3–6 months. Ongoing advisory retainers continue as long as we're
+                creating value — month-to-month after an initial term.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are you really vendor-agnostic?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes. We don't accept referral fees, kickbacks, or commissions from any technology partner.
+                Our only revenue comes from the brands we advise. That independence is the foundation of
+                the business — and it's why operators trust the recommendations we make.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Will you sign an NDA?</summary>
+            <div class="faq-answer">
+              <p>Of course. We sign mutual NDAs on every engagement before any sensitive information changes hands.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you work with brands that already have a tech stack?</summary>
+            <div class="faq-answer">
+              <p>
+                Most of our clients do. We're often hired to evaluate, optimize, or renegotiate existing
+                relationships rather than to rip-and-replace. Sometimes the right answer is a small change;
+                sometimes it's a new stack. We tell you which.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What size brands do you work with?</summary>
+            <div class="faq-answer">
+              <p>
+                Anywhere from emerging concepts preparing for their first franchisee to multi-unit
+                operators and multi-brand platforms. Our case studies range from 25-unit chains
+                to 400-unit franchise systems.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are you available outside Chicago and Detroit?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes — we work with brands across the U.S. and travel for site visits, RFP days, and
+                franchisee onboarding. The Chicago and Detroit offices are our home bases.
+              </p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
   </main>

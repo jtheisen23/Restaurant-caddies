@@ -25,6 +25,18 @@ Plain static site — no build step required.
 - `sitemap.xml` and `robots.txt` — for search engine indexing
 - JSON-LD `ProfessionalService` schema is inlined in `index.html` for rich Google results
 
+## Live preview (GitHub Pages)
+
+A GitHub Actions workflow at `.github/workflows/deploy-pages.yml` deploys the site to GitHub Pages on every push to `main` or `claude/redesign-restaurant-website-rGcDo`.
+
+**To enable the preview URL** (one-time setup):
+
+1. Go to **Settings → Pages** on the repo
+2. Under "Build and deployment" → "Source", select **GitHub Actions**
+3. Push any commit (or run the workflow manually from the Actions tab)
+
+The site will then be available at `https://jtheisen23.github.io/Restaurant-caddies/`.
+
 ## Local preview
 
 Open `index.html` in a browser, or run a local server:
