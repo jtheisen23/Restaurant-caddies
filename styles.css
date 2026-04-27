@@ -151,8 +151,8 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .brand {
@@ -168,6 +168,28 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
 .brand-mark { color: var(--c-accent); }
 .brand-name { font-family: var(--font-serif); font-size: 1.2rem; }
 .brand-accent { color: var(--c-accent); font-style: italic; }
+
+/* Header brand logo (uses the user-supplied JPG) */
+.brand-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+  /* drops the white JPG background on light bgs by killing white pixels via multiply */
+  mix-blend-mode: multiply;
+}
+@media (max-width: 720px) {
+  .brand-logo { height: 52px; }
+}
+
+/* Footer/dark contexts: invert to white-on-dark and use screen blend so the
+   JPG's white background blends into the dark surface instead of showing as
+   a white box. */
+.site-footer .brand-logo,
+.section-dark .brand-logo,
+.section-cta .brand-logo {
+  mix-blend-mode: screen;
+  filter: invert(1) brightness(1.1);
+}
 
 .primary-nav ul {
   list-style: none;
