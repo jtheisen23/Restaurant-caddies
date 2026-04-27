@@ -1,7 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <!-- forest green disc -->
   <circle cx="32" cy="32" r="32" fill="#0b1f17"/>
-  <circle cx="32" cy="32" r="29" fill="none" stroke="#b8753a" stroke-width="1.2" opacity="0.45"/>
-  <circle cx="32" cy="22" r="3.2" fill="#b8753a"/>
-  <path d="M32 25.2 L32 47" stroke="#b8753a" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M22 47 L42 47" stroke="#b8753a" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- three "club" tops sticking out the top of the bag (fork, knife, spoon abstracted) -->
+  <path d="M27 13 L27 24 M32 11 L32 24 M37 14 L37 24"
+        stroke="#b8753a" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+  <!-- bag opening band -->
+  <rect x="23" y="24" width="18" height="3" rx="1" fill="#b8753a"/>
+
+  <!-- bag body (slight trapezoid) -->
+  <path d="M25 28 L39 28 L37 51 L27 51 Z"
+        fill="none" stroke="#b8753a" stroke-width="2.4" stroke-linejoin="round"/>
+
+  <!-- side pocket -->
+  <rect x="27" y="38" width="4.5" height="6.5" rx="0.6"
+        fill="none" stroke="#b8753a" stroke-width="1.6"/>
 </svg>

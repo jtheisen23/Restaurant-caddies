@@ -181,6 +181,14 @@ p  { margin: 0 0 1em; color: var(--c-ink-soft); }
   .brand-logo { height: 52px; }
 }
 
+/* Footer-specific size variant — slightly smaller than the header */
+.brand-logo--footer {
+  height: 72px;
+}
+@media (max-width: 720px) {
+  .brand-logo--footer { height: 60px; }
+}
+
 /* Footer/dark contexts: invert to white-on-dark and use screen blend so the
    JPG's white background blends into the dark surface instead of showing as
    a white box. */
